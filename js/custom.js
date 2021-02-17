@@ -307,8 +307,8 @@ tl.to('.custom_paw img', 2 ,{
     opacity : 0,
 },"nono")
 .to('.custom_block3', 1 ,{
-    opacity: 0,
-    display:"none",
+    // opacity: 0,
+    // display:"none",
 },"nono")
 .to('.custom_block7', 1 ,{ //置中動畫開始
     margin: "0 auto",
