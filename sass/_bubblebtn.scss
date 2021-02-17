@@ -1,0 +1,145 @@
+
+.bubble_btnn{
+    margin: 0 10px;
+}
+
+.button ,.button_y{
+  -webkit-font-smoothing: antialiased;
+  background-color: #2f4f4f;
+  width: 200px;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 1px;
+  padding: 15px 0;
+  transition: all 0.1s ease-out;
+  border-radius:10px;
+
+  &--bubble {
+    position: relative;
+    z-index: 2;
+
+    &:hover + .button--bubble__effect-container .circle {
+      background: #2f4f4f;
+    }
+
+    &:hover + .button--bubble__effect-container .button {
+      background: #2f4f4f;
+    }
+
+    &:active + .button--bubble__effect-container {
+      transform: scale(0.35);
+    }
+
+    &__container {
+      position: relative;
+      display: inline-block;
+
+      .effect-button {
+        position: absolute;
+        width: 50%;
+        height: 25%;
+        top: 50%;
+        left: 25%;
+        z-index: 1;
+        transform: translateY(-50%);
+        background: #2f4f4f;
+        transition: background 0.1s ease-out;
+      }
+    }
+  }
+}
+
+.button--bubble__effect-container {
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 400%;
+  top: -150%;
+  left: -50%;
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+
+  .circle {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    background: #2f4f4f;
+    transition: background 0.1s ease-out;
+
+    &.top-left {
+        top: 40%;
+        left: 27%;
+    }
+
+    &.bottom-right {
+        bottom: 40%;
+        right: 27%;
+    }
+  }
+}
+
+.goo {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+
+.button--bubble__container {
+  top: 50%;
+  margin-top: -25px;
+}
+
+@keyframes hue-rotate {
+      from {
+        -webkit-filter: hue-rotate(0);
+        -moz-filter: hue-rotate(0);
+        -ms-filter: hue-rotate(0);
+        filter: hue-rotate(0);
+      }
+      to {
+        -webkit-filter: hue-rotate(360deg);
+        -moz-filter: hue-rotate(360deg);
+        -ms-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+      }
+}
+
+
+
+
+// 以下為增加黃底綠字_btn樣式
+.button_y{
+    color: #2f4f4f;
+    background-color: #d9a420;
+        &:hover + .button--bubble__effect-container .circle {
+          background: #d9a420;
+        }
+    
+        &:hover + .button--bubble__effect-container .button {
+          background: #d9a420;
+        }
+        &__container {
+          position: relative;
+          display: inline-block;
+    
+          .effect-button {
+            background: #d9a420;
+          }
+        }
+  }
+
+.button_y .circle {
+      background: #d9a420;
+}
+

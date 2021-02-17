@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客製化多肉</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- tweenmax動畫效果 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+<body class="full_wrapper">
+
+    <section class="custom_pos">
+        <article>
+            <div class="bread">
+               <a href="">首頁</a> > <a href="">客製多肉</a>
+            </div>
+        </article>
+        
+
+        <article class="custom_wrapper">
+            <div class="custom_block7">
+                <!-- 爪子 -->
+                <div class="custom_paw">
+                    <img src="img/custom/paw.png" alt="">
+                </div>
+
+                <div class="custom_draw">
+                    <!-- 禮物上半部 -->
+                    <img src="img/custom/ribbon.png" alt="" class="custom_gift_ribbon">
+                    <img src="img/custom/gift_top.png" alt="" class="custom_gift_top">                   
+                  
+                    <div class="custom_draw_plant">
+                        <img src="img/custom/custom_01.png" alt="" id="custom_01">
+                        <img src="img/custom/custom_02.png" alt="" id="custom_02">
+                        <img src="img/custom/custom_03.png" alt="" id="custom_03">
+                        <img src="" alt="" id="decoration">
+                    </div>
+
+                    <div class="custom_draw_pot ">
+                        <img src="img/custom/pot_01.png" alt="" id="pot">
+                    </div>
+                </div> 
+
+                <!-- 禮物底部 -->
+                <img src="img/custom/gift_bottom.png" alt="" class="custom_gift_bottom">
+               
+                <div class="custom_price">
+                    每盆售價<br> $<span>1660</span>元
+                </div>
+
+                <!-- bubble按鈕 start -->
+                <div class="bubble_btnn">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                      <defs>
+                        <filter id="goo">
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                          <feComposite in="SourceGraphic" in2="goo"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                    
+                    <span class="button--bubble__container">
+                      <a ref="" class="button button--bubble">
+                        確認送出
+                      </a>
+                      <span class="button--bubble__effect-container">
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                        <span class="circle top-left"></span>
+                    
+                        <span class="button effect-button"></span>
+                    
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                        <span class="circle bottom-right"></span>
+                      </span>
+                    </span>
+                </div>
+                <!-- bubble按鈕 end -->
+
+                <div class="custom_btn">
+                    <div class="btn_delet turn180"></div>
+                    <i class="fas fa-trash-alt btn_delet" id="delet"></i>
+                </div>
+
+            </div>
+
+            <div class="custom_block3 ">
+                <img src="img/custom/door.png" alt="">
+               
+                <div class="custom_product">
+                    <ul class="custom_product_type">
+                        <li>多<br class="pconly">肉</li>
+                        <li class="bg_gold">裝<br class="pconly">飾</li>
+                        <li class="bg_green">器<br class="pconly">皿</li>    
+                    </ul>
+
+                    
+                    <div class="custom_product_items">
+                        <div class="custom_say">
+                            <p>請選擇<b>3</b>種</p> 
+                            <i class="fas fa-exclamation-circle"></i>
+                            
+                        </div>
+                        <ul class="_onon pp" >
+                            <li><a ref=""><img src="img/custom/custom_01.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_02.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_03.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_04.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_05.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_06.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_07.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_08.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_09.png" alt="">仙人掌</a></li>
+                            <li><a ref=""><img src="img/custom/custom_010.png" alt="">仙人掌</a></li>
+                        </ul>
+
+                        <ul class="dd">
+                            <li><a ref=""><img src="img/custom/dec_01.png" alt="">小房子</a></li>
+                            <li><a ref=""><img src="img/custom/dec_02.png" alt="">小蘑菇</a></li>
+                            <li><a ref=""><img src="img/custom/dec_03.png" alt="">小房子</a></li>
+                            <li><a ref=""><img src="img/custom/dec_04.png" alt="">小蘑菇</a></li>
+                            <li><a ref=""><img src="img/custom/dec_05.png" alt="">小房子</a></li>
+                            <li><a ref=""><img src="img/custom/dec_06.png" alt="">小蘑菇</a></li>
+                        </ul>
+
+                        <ul class="bb">
+                            <li><a ref=""><img src="img/custom/pot_01.png" alt="">水泥器皿</a></li>
+                            <li><a ref=""><img src="img/custom/pot_02.png" alt="">陶瓷器皿</a></li>
+                            <li><a ref=""><img src="img/custom/pot_03.png" alt="">水泥器皿</a></li>
+                            <li><a ref=""><img src="img/custom/pot_04.png" alt="">陶瓷器皿</a></li>
+                            <li><a ref=""><img src="img/custom/pot_08.png" alt="">水泥器皿</a></li>
+                            <li><a ref=""><img src="img/custom/pot_06.png" alt="">陶瓷器皿</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+            
+        </article>
+
+        
+
+        <div class="ex"></div>
+        <div class="ex"></div>
+
+
+        <!-- 背景泡泡動畫 start-->
+        <div class="circle_block -left_top">
+            <div class="circle_green2"></div>
+            <div class="circle_gold"></div>
+        </div>
+
+        <div class="circle_block -right_bottom">
+            <div class="circle_deepgreen"></div>
+            <div class="circle_green1"></div>
+        </div>
+
+        <!-- 背景泡泡動畫 end-->
+
+
+
+    </section>
+
+
+
+    <!-- footer start -->
+    <!-- <div class="plant_info">
+        <img src="img/icon_plant_footer.png" alt="">
+    </div> -->
+
+    <footer>
+        <article>
+            <div class="brand_info">
+                <ul>
+                    <li><a href="">商品專區</a></li>
+                    <li><a href="">客製多肉</a></li>
+                    <li><a href="">心理測驗</a></li>
+                    <li><a href="">手作課程</a></li>
+                    <li><a href="">多肉知識</a></li>
+                </ul>    
+
+                <ol>
+                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                </ol>
+
+                <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="logo_info">
+                <a href=""><img src="img/icon_logo_footer.png" alt=""></a>
+                <p>tel : 02-2338-8365</p>
+                <p>e-mail : Succulents Monster@gmail.com </p>
+                <p>address : 104 台北市中山區南京東路三段219號</p>
+                <p>open : 週一至週日 11:00 – 18:30</p>
+
+            </div>
+
+        </article>
+
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     <!-- jquery-ui -->
+     <script src="js/jquery-ui.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bubble_btn動畫效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/bubblebtn.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //客製多肉商品區
+            $('.custom_product_type li:nth-child(1)').click(function () {    
+                $('.custom_product_items ul:first').addClass('_onon');
+                $('.custom_product_items ul:first').siblings().removeClass('_onon');  
+                $('.custom_product_items').removeClass('bg_green');  
+                $('.custom_product_items').removeClass('bg_gold');
+                $('.custom_say p').html('請選擇<b>3</b>種');    
+                   
+            });
+            $('.custom_product_type li:nth-child(2)').click(function () {    
+                $('.custom_product_items ul:nth-child(3)').addClass('_onon');
+                $('.custom_product_items ul:nth-child(3)').siblings().removeClass('_onon');  
+                $('.custom_product_items').addClass('bg_gold');  
+                $('.custom_product_items').removeClass('bg_green');  
+                $('.custom_say p').html('請選擇<b>1</b>種');     
+                   
+            });
+            $('.custom_product_type li:nth-child(3)').click(function () {    
+                $('.custom_product_items ul:last').addClass('_onon');
+                $('.custom_product_items ul:last').siblings().removeClass('_onon');     
+                $('.custom_product_items').addClass('bg_green');  
+                $('.custom_product_items').removeClass('bg_gold');   
+                $('.custom_say p').html('請選擇<b>1</b>種');    
+                   
+            });
+            $('.turn180').click(function () { 
+                $('.custom_draw_plant img').toggleClass('-mirror');
+                $('.custom_draw_pot img').toggleClass('-mirrorpot');
+                
+            });
+
+
+            //客製多肉拖曳功能
+            $('.custom_draw_plant img').draggable({
+                cursor: "pointer",
+                // opacity: .5,
+                revert: false, //回到原點
+                axis: "x", //只能拖x軸 or y軸
+                containment:"parent", //只能在父層範圍內使用
+
+                // start: function(){},
+                // drag: function(){},
+                // stop: function(){}, //冒號後面function可省略，變下面那樣
+
+                // start(){
+                //     $('#feedback').text("開始拖曳");
+                // },
+                // drag(){
+                //     $('#feedback').text("拖曳中");
+                //     $('#feedback').css("color","red");
+                     
+                // },
+                // stop(){
+                //     $('#feedback').text("拖曳結束");
+                //     $('#feedback').css("color","black");
+                // },
+
+
+
+            });
+
+
+            
+        });
+    </script>
+
+    <!-- 自已的js -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

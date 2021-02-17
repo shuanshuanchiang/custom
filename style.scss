@@ -1,0 +1,174 @@
+//這個是取消全部樣式的css
+@import "sass/reset";
+@import "sass/var";
+//這個是bubble_btn的css，記得html要引用bubble_btn動畫效果的js & TweenMax
+@import "sass/bubblebtn";
+
+//----------------以上不要動！！，以下開放自己的sass，按照自己的區塊放(可自己更動區塊名字)-------------------------
+//首頁
+
+//商品頁＆商品內頁
+
+// //客製化多肉 ＆ 心理測驗
+@import "sass/custom";
+@import "sass/mindtest";
+
+//手作課程
+
+//部落格
+
+//購物車＆結帳系統
+
+//會員中心 & 會員登入
+
+//Q&A
+
+//----------------共用scss開始-------------------------
+*,
+*:before,
+*::after {
+  @extend %box_sizing;
+}
+
+body {
+  font-family: $font_family;
+  color: map-get($color, "main_g");
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  font-size: map-get($fontsize, "normall");
+}
+
+html {
+  font-size: $html_fontsize;
+  // font-size: 16px;
+}
+
+a {
+  @include a_link;
+  color: map-get($color, "main_g");
+}
+
+img {
+  @include img;
+}
+
+section {
+  @include section;
+}
+
+article {
+  @include article;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.btn_green {
+  a {
+    background-color: map-get($color, "main_g");
+    color: map-get($color, "white");
+    margin: 0px auto;
+    @include btn;
+    @include a_link;
+  }
+}
+
+.btn_yellow {
+  a {
+    background-color: map-get($color, "yellow");
+    margin: 0px auto;
+    @include btn;
+    @include a_link;
+  }
+}
+
+.ex {
+  @extend %ex;
+}
+
+.bread {
+  float: left;
+  font-size: map-get($fontsize, "mini");
+  display: flex;
+}
+
+.full_wrapper {
+  @include full_wrapper;
+}
+
+
+// footer
+footer {
+  background-color: #2f4f4f;
+  color: #fff;
+  font-size: 12px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer article {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+  @include mobile{
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+footer .line {
+  border-left: 2px solid #fff;
+  height: 165px;
+  order: 0;
+  @include mobile{
+    order: 1;
+    // transform: rotate(90deg);
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-bottom: 2px solid #fff;
+    margin: 40px auto;
+  }
+
+}
+
+.brand_info {
+  height: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  @include mobile{
+    order: 2;
+  }
+  
+}
+
+.brand_info ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand_info ol {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28px;
+}
+
+.brand_info li {
+  margin-right: 30px;
+}
+
+.logo_info {
+  line-height: 2;
+}
+
+.logo_info img {
+  display: block;
+  width: 250px;
+  margin-bottom: 20px;
+}

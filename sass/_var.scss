@@ -1,0 +1,107 @@
+
+$html_fontsize: 62.5%;
+$font_family: "Noto Sans TC", "sans-serif";
+$fontsize: (
+  "mini": 1.2rem,
+  "small": 1.4rem,
+  "normall": 1.6rem,
+  "larger": 1.8rem,
+  "big": 2.6rem,
+);
+
+$color: (
+  // 主色
+  "main_g": #2f4f4f,
+  "gold": #d0c3a3,
+  // Secondary 輔色
+  "green1": #6a764e,
+  "green2": #979f77,
+  "gray": #eeebeb,
+  "gray2": #efefef,
+  // Accent color 強調色
+  "yellow": #d9a420,
+  // heart 收藏愛心
+  "pink": #d87680,
+  "white": #ffffff
+);
+
+%box_sizing {
+  box-sizing: border-box;
+}
+
+%ex {
+  padding: 50px 0;
+}
+
+@mixin img {
+  width: 100%;
+  @content;
+}
+
+@mixin a_link {
+  text-decoration: none;
+  display: block;
+}
+
+@mixin section {
+  // width: 100vw;
+  text-align: center;
+}
+
+@mixin article {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin btn {
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 200px; //220-250px
+  @content;
+}
+
+@mixin full_wrapper {
+  background-image: url(../img/gray_bg.png);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: cover;
+}
+
+// 新增
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+@mixin buttons() {
+  background-color: #2f4f4f;
+  border-radius: 5px;
+  margin: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px;
+  font-weight: bold;
+  width: 200px;
+  cursor: pointer;
+}
+
+// 斷點
+@mixin pad {
+  @media (max-width: 990px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
