@@ -306,15 +306,15 @@ tl.to('.custom_paw img', 2 ,{
 },"nono").to('.custom_btn', 1 ,{
     opacity : 0,
 },"nono")
-.to('.custom_block3', 1 ,{
-    // opacity: 0,
-    // display:"none",
-},"nono")
-.to('.custom_block7', 1 ,{ //置中動畫開始
-    margin: "0 auto",
-    ease: Power1.easeOut
-     //left: '30%',
- })
+// .to('.custom_block3', 1 ,{
+//     opacity: 0,
+//     display:"none",
+// },"nono")
+// .to('.custom_block7', 1 ,{ //置中動畫開始
+//     margin: "0 auto",
+//     ease: Power1.easeOut
+//      //left: '30%',
+//  })
  .to('.custom_gift_bottom', 1 ,{
    left: 0,  
 }).to('.custom_draw', 1 ,{
