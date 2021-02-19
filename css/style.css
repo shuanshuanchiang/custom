@@ -455,21 +455,50 @@ table {
   z-index: 4;
 }
 
-.custom_paw img {
-  display: block;
+.custom_paw_out {
   position: absolute;
-  top: -700px;
+  top: -600px;
   left: 0;
   right: 0;
+  width: 70%;
   margin: 0 auto;
-  width: 85%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 @media (max-width: 414px) {
-  .custom_paw img {
+  .custom_paw_out {
     top: -550px;
     width: 100%;
   }
+}
+
+.custom_paw img {
+  position: absolute;
+}
+
+.paw_l {
+  bottom: -40px;
+  left: -90px;
+  width: 76%;
+  z-index: 0;
+}
+
+.paw_m {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 18%;
+  z-index: 1;
+}
+
+.paw_r {
+  bottom: -40px;
+  right: -80px;
+  width: 76%;
+  z-index: 0;
 }
 
 .custom_gift_ribbon {
@@ -1026,7 +1055,7 @@ table {
   margin: 0 10px;
 }
 
-.custom_pos {
+.circle_pos {
   position: relative;
 }
 
@@ -1046,11 +1075,11 @@ table {
 
 .-right_bottom {
   right: 0;
-  bottom: 0;
+  bottom: 10%;
 }
 
 .-left_top {
-  top: 12%;
+  top: 15%;
   left: 0;
 }
 

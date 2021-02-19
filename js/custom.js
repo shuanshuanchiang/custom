@@ -282,12 +282,18 @@ if (screen.width < 721 ||
 }
 
 var tl = new TimelineMax();
-tl.to('.custom_paw img', 2, {
-    y: 500,
+tl.to('.custom_paw_out', 2, {
+    y: 1050,
     // rotation : -30 
-}).addLabel("upup")
-    .to('.custom_paw img', 1.5, {
-        y: 420,
+}).addLabel("rotate")
+.to('.paw_l', 1, {
+    rotation : -7,
+}, "rotate")
+.to('.paw_r', 1, {
+    rotation : 7,
+}, "rotate").addLabel("upup")
+    .to('.custom_paw_out', 1.5, {
+        y: 970,
     }, "upup")
     .to('.custom_draw', 1.5, {
         y: -70,
@@ -301,26 +307,35 @@ tl.to('.custom_paw img', 2, {
     }, "nono")
     .to('.custom_block3', 1, {
         opacity: 0,
-        //display:"none",
+        display:"none",
     }, "nono")
     .to('.custom_block7', 1, { //置中動畫開始
-        margin: "0 auto",
+        // margin: "0 auto",
         ease: Power1.easeOut,
         left: dis,
     })
     .to('.custom_gift_bottom', 1, {
         left: 0,
-    }).to('.custom_draw', 1, {
+    }).addLabel("rotate_d")
+    .to('.paw_l', .5, {
+        rotation : 7,
+    }, "rotate_d")
+    .to('.paw_r', .5, {
+        rotation : -7,
+    }, "rotate_d")
+    .to('.custom_draw', .5, {
+        delay: 0.2,
         y: 40,
         zIndex: 1,
-    }).to('.custom_paw img', 1, {
+    }, "rotate_d")
+    .to('.custom_paw img', 1, {
         y: -600,
         ease: Bounce.easeOut,
 
     }).to('.custom_gift_top', .5, {
         top: 0,
     }).to('.custom_gift_ribbon', .5, {
-        top: -140,
+        top: -160,
     });
 
 tl.stop();
