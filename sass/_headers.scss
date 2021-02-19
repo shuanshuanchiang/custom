@@ -7,7 +7,8 @@
 	top: 0;
 	width: 100%;
 	padding: 20px 0;
-	z-index: 100;
+  z-index: 100;
+  transition: top .4s ease-in-out;
 }
 
 header{
@@ -39,7 +40,6 @@ header ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 header ol{
@@ -52,4 +52,12 @@ header ol{
 header li{
   display: flex;
   cursor: pointer;
+}
+
+.hideUp{
+  top: -80px;
+}
+
+.addbg{
+  background-color: rgba(255,255,255,.7);
 }

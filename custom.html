@@ -30,7 +30,7 @@
 </head>
 <body class="full_wrapper">
 
-    <section class="custom_pos">
+    <section class="circle_pos">
 
         <!-- header開始 -->
         <div class="header_bg">
@@ -52,7 +52,7 @@
             </header>
         </div> 
 
-        <div class="ex"></div>
+        <div class="ex"></div> <!-- 這是用來推高度的，不需要可自行拔掉 -->
         <!-- header結束 -->
         
 
@@ -69,6 +69,15 @@
                 <div class="custom_paw">
                     <img src="img/custom/paw.png" alt="">
                 </div>
+                
+                <!-- 爪子 -->
+                <!-- <div class="custom_paw">
+                    <div class="custom_paw_out">
+                        <img src="img/custom/paw_l.png" alt="" class="paw_l">
+                        <img src="img/custom/paw_main.png" alt="" class="paw_m">
+                        <img src="img/custom/paw_r.png" alt="" class="paw_r">  
+                    </div>
+                </div> -->
 
                 <div class="custom_draw">
                     <!-- 禮物上半部 -->
@@ -187,10 +196,7 @@
             </div>
             
         </article>
-
-        
-
-        <div class="ex"></div>
+ 
         <div class="ex"></div>
 
 
@@ -334,8 +340,25 @@
             });
 
 
+            lastScrollY = 0;
+            window.addEventListener('scroll', function(){
+            var st = this.scrollY;
+            // 判斷是向上捲動，而且捲軸超過 200px
+            if( st < lastScrollY) {
+                $('.header_bg').removeClass('hideUp');
+                // $('.header_bg').addClass('addbg');
+            }else{
+                $('.header_bg').addClass('hideUp');
+                // $('.header_bg').removeClass('addbg');
+            }
+            lastScrollY = st;
+            });
+
             
         });
+
+       
+            
     </script>
 
     <!-- 自已的js -->

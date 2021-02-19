@@ -1,0 +1,89 @@
+//以下為泡泡動畫
+.custom_pos{
+    position: relative;
+}
+
+.circle_block{
+   width: 300px;
+   height: 400px;
+   overflow: hidden;
+   // outline: 1px solid red;
+   position: absolute;
+   z-index: -1;
+   @include mobile{
+       display: none;
+   }
+}
+
+.-right_bottom{
+   right: 0;
+   bottom: 0;
+}
+
+.-left_top{
+   top: 12%;
+   left: 0;
+}
+
+.circle_deepgreen{
+   width: 350px;
+   height: 350px;
+   background-color: #2f4f4f;
+   // border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;
+   animation: circle1 5s linear infinite;
+   position: absolute;
+   right: -60%;
+   bottom: 20px;
+   
+}
+.circle_green1{
+   width: 100px;
+   height: 100px;
+   border: 3px solid #677749;
+   // border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;
+   animation: circle2 8s linear infinite;
+   position: absolute;
+   left: 35%;
+   bottom: 20px;
+   
+}
+
+.circle_green2{
+   width: 180px;
+   height: 180px;
+   background-color:rgba(147,158,114,.8);
+   // border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;
+   animation: circle2 5s linear infinite;
+   position: absolute;
+   left: -30%;
+   top: 0; 
+}
+
+.circle_gold{
+   width: 60px;
+   height: 60px;
+   border: 2px solid #d0c3a3;
+   // border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;
+   animation: circle1 5s linear infinite;
+   position: absolute;
+   left: 20%;
+   top: 0;   
+}
+
+@keyframes circle1 {
+   0%{border-radius: 62% 38% 34% 66% / 70% 57% 43% 30%  ;}
+   25%{border-radius: 45% 55% 35% 65% / 63% 42% 58% 37% ;}
+   50%{border-radius: 57% 43% 52% 48% / 41% 49% 51% 59%  ;}
+   75%{border-radius: 59% 41% 50% 50% / 28% 54% 46% 72%  ;}
+   100%{border-radius: 62% 38% 34% 66% / 70% 57% 43% 30%  ;}
+       
+} 
+
+@keyframes circle2 {
+   0%{border-radius: 65% 35% 68% 32% / 39% 50% 50% 61%    ;}
+   25%{border-radius: 47% 53% 34% 66% / 36% 50% 50% 64%   ;}
+   50%{border-radius: 57% 43% 52% 48% / 41% 49% 51% 59%  ;}
+   75%{border-radius: 66% 34% 36% 64% / 40% 70% 30% 60%    ;}
+   100%{border-radius: 65% 35% 68% 32% / 39% 50% 50% 61%    ;}
+       
+} 
