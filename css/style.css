@@ -795,110 +795,6 @@ table {
   z-index: 1;
 }
 
-.custom_pos {
-  position: relative;
-}
-
-.circle_block {
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-@media (max-width: 768px) {
-  .circle_block {
-    display: none;
-  }
-}
-
-.-right_bottom {
-  right: 0;
-  bottom: 10%;
-}
-
-.-left_top {
-  top: 12%;
-  left: 0;
-}
-
-.circle_deepgreen {
-  width: 350px;
-  height: 350px;
-  background-color: #2f4f4f;
-  animation: circle1 5s linear infinite;
-  position: absolute;
-  right: -60%;
-  bottom: 20px;
-}
-
-.circle_green1 {
-  width: 100px;
-  height: 100px;
-  border: 3px solid #677749;
-  animation: circle2 8s linear infinite;
-  position: absolute;
-  left: 35%;
-  bottom: 20px;
-}
-
-.circle_green2 {
-  width: 180px;
-  height: 180px;
-  background-color: rgba(147, 158, 114, 0.8);
-  animation: circle2 5s linear infinite;
-  position: absolute;
-  left: -30%;
-  top: 0;
-}
-
-.circle_gold {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #d0c3a3;
-  animation: circle1 5s linear infinite;
-  position: absolute;
-  left: 20%;
-  top: 0;
-}
-
-@keyframes circle1 {
-  0% {
-    border-radius: 62% 38% 34% 66% / 70% 57% 43% 30%;
-  }
-  25% {
-    border-radius: 45% 55% 35% 65% / 63% 42% 58% 37%;
-  }
-  50% {
-    border-radius: 57% 43% 52% 48% / 41% 49% 51% 59%;
-  }
-  75% {
-    border-radius: 59% 41% 50% 50% / 28% 54% 46% 72%;
-  }
-  100% {
-    border-radius: 62% 38% 34% 66% / 70% 57% 43% 30%;
-  }
-}
-
-@keyframes circle2 {
-  0% {
-    border-radius: 65% 35% 68% 32% / 39% 50% 50% 61%;
-  }
-  25% {
-    border-radius: 47% 53% 34% 66% / 36% 50% 50% 64%;
-  }
-  50% {
-    border-radius: 57% 43% 52% 48% / 41% 49% 51% 59%;
-  }
-  75% {
-    border-radius: 66% 34% 36% 64% / 40% 70% 30% 60%;
-  }
-  100% {
-    border-radius: 65% 35% 68% 32% / 39% 50% 50% 61%;
-  }
-}
-
 .mindtest_wrapper {
   background-image: url(../img/mind/mind_iconbg.png), url(../img/gray_bg.png);
   background-repeat: no-repeat,no-repeat;
@@ -1127,6 +1023,59 @@ table {
 
 .mind_btn .btn_green {
   margin: 0 10px;
+}
+
+.header_bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 100;
+}
+
+header {
+  width: calc(100% - 200px);
+  min-width: 900px;
+  line-height: 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  display: block;
+  width: 160px;
+  height: 35px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ol {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+  font-size: 22px;
+}
+
+header li {
+  display: flex;
+  cursor: pointer;
 }
 
 body {
