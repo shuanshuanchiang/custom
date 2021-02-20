@@ -35,12 +35,12 @@
     @include mobile{
         margin: 30px auto 0;
         background-size: contain;
-        height: 635px;
+        height: auto;
     }
     @include phone{
         margin: 60px auto 0;
         background-position-y: top;
-        height: 665px;
+        
     }
 
 }
@@ -88,10 +88,11 @@
     bottom: 20px;
     width: 115px;
     @include mobile{
-        bottom: 0;
+        bottom: 20px;
     }
     @include phone{
         flex-direction: column;
+        
     }
     
 }
@@ -177,16 +178,14 @@
     align-items: flex-end;
     justify-content: space-between;
     @include phone{
-        top: -550px;
-        width: 100%;
+        top: -650px;
+        width: 70%;
     }
     
 }
 
 .custom_paw img{
     position: absolute;
-    
- 
     // width: 85%;
     @include phone{
         // top: -550px;
@@ -198,7 +197,9 @@
     left: -90px;
     width: 76%;
     z-index: 0;
-    // transform: rotate(-10deg);
+    @include phone{
+        left: -60px;
+    }
 }
 
 .paw_m{
@@ -215,6 +216,9 @@
     right: -80px;
     width: 76%;
     z-index: 0;
+    @include phone{
+        right: -55px;
+    }
 }
 
 .custom_gift_ribbon{
@@ -257,7 +261,7 @@
     z-index: 0;
     @include phone{
         width: 100%;
-        bottom: 30px;
+        bottom: 50px;
     }
 }
 

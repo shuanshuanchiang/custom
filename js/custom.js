@@ -277,14 +277,21 @@ if (screen.width < 721 ||
     navigator.userAgent.match(/iPod/i)) {
     //alert("This is a mobile device");
     var dis = "0%";
+    var show = "block";
+    var pawpos = 950;
+    var down = 870;
+    var hide = 1;
 } else {
     var dis = "20%";
+    var show = "none";
+    var pawpos = 1050;
+    var down = 970;
+    var hide = 0;
 }
 
 var tl = new TimelineMax();
-tl.to('.custom_paw_out', 2, {
-    y: 1050,
-    // rotation : -30 
+tl.to('.custom_paw_out', 1.5, {
+    y: pawpos,
 }).addLabel("rotate")
 .to('.paw_l', 1, {
     rotation : -7,
@@ -293,7 +300,7 @@ tl.to('.custom_paw_out', 2, {
     rotation : 7,
 }, "rotate").addLabel("upup")
     .to('.custom_paw_out', 1.5, {
-        y: 970,
+        y: down,
     }, "upup")
     .to('.custom_draw', 1.5, {
         y: -70,
@@ -306,8 +313,8 @@ tl.to('.custom_paw_out', 2, {
         opacity: 0,
     }, "nono")
     .to('.custom_block3', 1, {
-        opacity: 0,
-        display:"none",
+        opacity: hide,
+        display: show,
     }, "nono")
     .to('.custom_block7', 1, { //置中動畫開始
         // margin: "0 auto",

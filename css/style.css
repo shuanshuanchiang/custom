@@ -329,7 +329,7 @@ table {
   .custom_block7 {
     margin: 30px auto 0;
     background-size: contain;
-    height: 635px;
+    height: auto;
   }
 }
 
@@ -337,7 +337,6 @@ table {
   .custom_block7 {
     margin: 60px auto 0;
     background-position-y: top;
-    height: 665px;
   }
 }
 
@@ -391,7 +390,7 @@ table {
 
 @media (max-width: 768px) {
   .custom_btn {
-    bottom: 0;
+    bottom: 20px;
   }
 }
 
@@ -469,8 +468,8 @@ table {
 
 @media (max-width: 414px) {
   .custom_paw_out {
-    top: -550px;
-    width: 100%;
+    top: -650px;
+    width: 70%;
   }
 }
 
@@ -483,6 +482,12 @@ table {
   left: -90px;
   width: 76%;
   z-index: 0;
+}
+
+@media (max-width: 414px) {
+  .paw_l {
+    left: -60px;
+  }
 }
 
 .paw_m {
@@ -499,6 +504,12 @@ table {
   right: -80px;
   width: 76%;
   z-index: 0;
+}
+
+@media (max-width: 414px) {
+  .paw_r {
+    right: -55px;
+  }
 }
 
 .custom_gift_ribbon {
@@ -552,7 +563,7 @@ table {
 @media (max-width: 414px) {
   .custom_gift_bottom {
     width: 100%;
-    bottom: 30px;
+    bottom: 50px;
   }
 }
 
