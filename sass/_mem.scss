@@ -1,0 +1,109 @@
+.mem_wrapper{
+    display: flex;
+}
+
+.mem_btn{
+    width: 20%;
+
+}
+
+.mem_btn li{
+    padding: 15px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #2f4f4f;
+
+}
+
+.mem_main{
+    width: 80%;
+
+}
+
+.center_wrapper{
+    background-color: #fff;
+    border-radius: 30px 30px 10px 10px;
+}
+
+.center_wrapper>h1{
+    background-color: #2f4f4f;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.center_contain{
+    // outline: 1px solid red;
+    display: flex;
+    margin: 0 auto;
+    padding: 60px 0;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 800px;
+}
+
+form{
+    text-align: left;
+    input{
+        border: none;
+        border-radius: 5px;
+        background-color: #eeebeb;
+    }
+    button{
+        width: 200px;
+        height: 50px;
+        margin: 40px auto 0;
+        background-color: #2f4f4f;
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+    }
+}
+
+.mem_photo{
+    label{
+        position: relative;
+    }
+    img{
+        width: 180px;
+        border-radius: 10px;
+    }
+    i{
+        font-size: 20px;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+    }
+}
+
+.mem_wrp{
+    margin-bottom: 20px;
+    display: flex;
+    input{
+        height: 30px;
+    }
+    .long{
+        width: 300px;
+    }
+}
+
+
+// ---------- 訂單查詢 -----------
+.mem_order{
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #eeebeb;
+    .mem_order_tit{
+        background-color: #eeebeb;
+        display: flex;
+        justify-content: space-evenly;
+        p{
+            display: block;
+            
+        }
+    }
+}
+
