@@ -1181,7 +1181,7 @@ table {
   transition: top .4s ease-in-out;
 }
 
-header {
+.headers {
   width: calc(100% - 200px);
   min-width: 900px;
   line-height: 30px;
@@ -1191,7 +1191,16 @@ header {
   justify-content: space-between;
 }
 
-header img {
+@media (max-width: 990px) {
+  .headers {
+    width: 100%;
+    min-width: unset;
+    padding-left: 20px;
+    padding-right: 80px;
+  }
+}
+
+.headers img {
   display: block;
   width: 160px;
   height: 35px;
@@ -1199,29 +1208,107 @@ header img {
   cursor: pointer;
 }
 
-nav {
+.ham {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .ham {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.ham span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin: 8px auto;
+  background-color: #2f4f4f;
+  border-radius: 1px;
+  transform-origin: 25px 0px;
+  transition: transform 0.8s cubic-bezier(0.04, 0.27, 0.5, 1.01), opacity 0.55s ease;
+}
+
+.ham span:nth-child(1) {
+  transform-origin: 10% 0%;
+}
+
+.ham span:nth-child(2) {
+  transform-origin: 100% 100%;
+}
+
+.ham span:nth-child(3) {
+  transform-origin: 10% 0%;
+}
+
+.-hamclose {
+  display: block;
+  transition: .6s;
+}
+
+.-hamclose span {
+  background-color: #fff;
+  opacity: 1;
+  transform: rotate(45deg) translate(2px, -1px);
+}
+
+.-hamclose span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.-hamclose span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 0px);
+}
+
+.navs {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header ul {
+.headers ul {
   width: 450px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 1s;
 }
 
-header ol {
+@media (max-width: 990px) {
+  .headers ul {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    position: absolute;
+    background-color: #2f4f4f;
+    right: -100vw;
+    top: 0;
+    padding: 100px 0;
+  }
+  .headers ul a {
+    color: #fff;
+  }
+}
+
+.headers ol {
   display: flex;
   justify-content: space-between;
   width: 70px;
   font-size: 22px;
 }
 
-header li {
+.headers ol li {
   display: flex;
   cursor: pointer;
+}
+
+.headers .-showmenu {
+  right: 0;
 }
 
 .hideUp {

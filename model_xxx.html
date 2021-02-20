@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己的頁面</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- aos動畫效果 -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 自己的css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <!-- 目前共用的標籤 
+        body
+        html
+        section
+        article
+        .bread
+        .btn_green
+        .btn_yellow
+        .bubble_btnn
+        .ex
+        footer
+    -->
+
+
+    <!-- section 的範圍為全螢幕，主要用來放background-image的-->
+    <!-- 要新增背景圖請另外加class ex:class="full_wrapper" -->
+    <section class="full_wrapper">
+
+
+        <!-- 麵包屑在這 -->
+        <article>
+            <div class="bread">
+               <a href="">首頁</a> > <a href="">心理測驗</a>
+            </div>
+        </article>
+
+        
+
+
+
+        <!-- article 的內容的安全範圍(1200px)，每個區塊都用一個article包起來 -->
+        <article style="outline: 1px solid red;">
+            <!-- 內容放這裡 -->
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+            內容放這裡！！！！自由發揮<br>
+
+
+            <!-- 一般的綠按鈕 -->
+            <div class="btn_green">
+                <a href="">確認送出</a>
+            </div>
+
+
+            <!-- 一般的黃按鈕 -->
+            <div class="btn_yellow">
+                <a href="">確認送出</a>
+            </div>
+
+
+            <!-- 綠色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                  <defs>
+                    <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                      <feComposite in="SourceGraphic" in2="goo"/>
+                    </filter>
+                  </defs>
+                </svg>
+                
+                <span class="button--bubble__container">
+                  <a href="" class="button button--bubble">
+                    確認送出
+                  </a>
+                  <span class="button--bubble__effect-container">
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                
+                    <span class="button effect-button"></span>
+                
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                  </span>
+                </span>
+            </div>
+            <!-- 綠色bubble按鈕 end -->
+
+
+            <hr>
+
+
+            <!-- 黃色bubble按鈕 start -->
+            <div class="bubble_btnn">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+                  <defs>
+                    <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                      <feComposite in="SourceGraphic" in2="goo"/>
+                    </filter>
+                  </defs>
+                </svg>
+                
+                <span class="button--bubble__container">
+                  <a href="" class="button_y button--bubble">
+                    確認送出
+                  </a>
+                  <span class="button--bubble__effect-container">
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                    <span class="circle top-left"></span>
+                
+                    <span class="button effect-button"></span>
+                
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                    <span class="circle bottom-right"></span>
+                  </span>
+                </span>
+            </div>
+            <!-- 黃色bubble按鈕 end -->
+
+        </article>
+
+
+
+
+        <!-- 用來調整上下間隔高度的，高度目前設定為100px，一定要放在section裡 -->
+        <div class="ex" style="outline: 1px solid green;"></div>
+        <div class="ex" style="outline: 1px solid green;"></div>
+       
+    </section>
+  
+
+
+
+    
+
+
+    <footer>
+        <article>
+            <div class="brand_info">
+                <ul>
+                    <li><a href="">商品專區</a></li>
+                    <li><a href="">客製多肉</a></li>
+                    <li><a href="">心理測驗</a></li>
+                    <li><a href="">手作課程</a></li>
+                    <li><a href="">部落格</a></li>
+                </ul>    
+
+                <ol>
+                    <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                </ol>
+
+                <p>ⓒ Copyright Shimabara Shokuhin All Rights Reserved. </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="logo_info">
+                <a href=""><img src="img/icon_logo_footer.png" alt=""></a>
+                <p>tel : 02-2338-8365</p>
+                <p>e-mail : Succulents Monster@gmail.com </p>
+                <p>address : 104 台北市中山區南京東路三段219號</p>
+                <p>open : 週一至週日 11:00 – 18:30</p>
+
+            </div>
+
+        </article>
+
+    </footer>
+    <!-- footer end -->
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- aos動畫效果 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- bubble_btn動畫效果 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/bubblebtn.js"></script>
+
+    <!-- main.js 包含header/QA仙人掌/側邊欄購物車/登入 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
