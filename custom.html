@@ -29,39 +29,35 @@
     
 </head>
 <body class="full_wrapper">
+    <!-- header開始，要放在body下面 -->
+    <div class="header_bg">
+        <div class="headers">
+            <div class="navs">
+               <a href="./main.html"><img src="img/logo.png" alt=""></a>
+                <ul>
+                    <li><a href="./shop.html">商品專區</a></li>
+                    <li><a href="./custom.html">客製多肉</a></li>
+                    <li><a href="./mindtest.html">心理測驗</a></li>
+                    <li><a href="./HandMake.html">手作課程</a></li>
+                    <li><a href="./blog_all.html">多肉知識</a></li>
+                </ul>
+            </div>  
+            <ol>
+                <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
+                <li><a href="./MemberCenter.html"><i class="fas fa-user"></i></a></li>
+            </ol>
+            <div class="ham">
+                <span></span> 
+                <span></span> 
+                <span></span>
+            </div>
+        </div>
+    </div> 
 
     <section class="circle_pos">
 
-        <!-- header開始 -->
-        <div class="header_bg">
-            <header>
-                <nav>
-                   <a href="./main.html"><img src="img/logo.png" alt=""></a>
-                    <ul>
-                        <li><a href="./shop.html">商品專區</a></li>
-                        <li><a href="./custom.html">客製多肉</a></li>
-                        <li><a href="./mindtest.html">心理測驗</a></li>
-                        <li><a href="./HandMake.html">手作課程</a></li>
-                        <li><a href="./blog_all.html">多肉知識</a></li>
-                    </ul>
-                </nav>  
-                <ol>
-                    <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-                    <li><a href="./MemberCenter.html"><i class="fas fa-user"></i></a></li>
-                </ol>
-                <div class="ham">
-                    <span></span> 
-                    <span></span> 
-                    <span></span>
-                </div>
-            </header>
-        </div> 
-
-        <div class="ex"></div> <!-- 這是用來推高度的，不需要可自行拔掉 -->
-        <!-- header結束 -->
-        
-
         <article>
+            <div class="ex"></div>
             <div class="bread">
                <a href="">首頁</a> > <a href="">客製多肉</a>
             </div>
@@ -342,22 +338,6 @@
 
 
             });
-
-
-            lastScrollY = 0;
-            window.addEventListener('scroll', function(){
-            var st = this.scrollY;
-            // 判斷是向上捲動，而且捲軸超過 200px
-            if( st < lastScrollY) {
-                $('.header_bg').removeClass('hideUp');
-                $('.header_bg').addClass('addbg');
-            }else{
-                $('.header_bg').addClass('hideUp');
-                $('.header_bg').removeClass('addbg');
-            }
-            lastScrollY = st;
-            });
-
             
         });
 
@@ -366,7 +346,7 @@
     </script>
 
     <!-- 自已的js -->
-    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/custom.js"></script>
 </body>
 </html>

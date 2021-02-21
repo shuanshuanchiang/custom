@@ -65,7 +65,7 @@
         <article class="mem_wrapper">
             <!-- 左邊按鈕區塊 -->
             <ul class="mem_btn">
-                <li>個人資料</li>
+                <li class="-mem_this">個人資料</li>
                 <li>訂單查詢</li>
                 <li>我的收藏</li>
                 <li>我有問題</li>
@@ -75,7 +75,7 @@
             <div class="mem_main">
 
                 <!-- 個人資料 -->
-                <!-- <div class="center_wrapper">
+                <div class="center_wrapper -mem_show">
                     <h1>個人資料</h1>
                     <div class="center_contain">
                         <div class="mem_photo">
@@ -117,7 +117,7 @@
                             
                         </form>
                     </div>    
-                </div> -->
+                </div>
                 <!-- 個人資料結束 -->
 
 
@@ -131,45 +131,192 @@
 
                         <!-- 情況2 訂單進來了 -->
                         <div class="mem_order">
-                            <div class="mem_order_tit">
-                                <div class="mem_time">
-                                    <p>訂單時間</p>
-                                    <span></span>
+                            <ul class="mem_order_top">
+                                <li class="mem_time">
+                                    <div class="tit">訂單時間</div>
+                                    <span>2021/2/3</span>
+                                </li>
 
-                                </div>
-                                <div class="mem_no">
-                                    <p>訂單編號</p>
-                                    <span></span>
+                                <li class="mem_no">
+                                    <div class="tit">訂單編號</div>
+                                    <span>202102031244</span>
+                                </li>
 
-                                </div>
-                                <div class="mem_pay">
-                                    <p>付款方式</p>
-                                    <span></span>
+                                <li class="mem_pay">
+                                    <div class="tit">付款方式</div>
+                                    <span>信用卡</span>
+                                </li>
 
-                                </div>
-                                <div class="mem_totle">
-                                    <p>訂單金額</p>
-                                    <span></span>
+                                <li class="mem_totle">
+                                    <div class="tit">訂單金額</div>
+                                    <span>$244</span>
+                                </li>
 
-                                </div>
-                                <div class="mem_status">
-                                    <p>訂單狀態</p>
-                                    <span></span>
+                                <li class="mem_status">
+                                    <div class="tit">訂單狀態</div>
+                                    <span>處理中</span>
+                                </li>
 
-                                </div>
-                                <div class="mem_star">
-                                    <p>商品評價</p>
-                                    <span></span>
+                            </ul>
+                            
+                            <div class="mem_open">訂單明細 <i class="fas fa-plus"></i></div>
 
-                                </div>
+                            <div class="order_list_wrapper">
+                                <ol>
+                                    <li>商品名稱</li>
+                                    <li>數量</li>
+                                    <li>價格</li>
+                                    <li>評價</li>
+                                </ol>    
+                                <ul class="mem_order_list">
+                                    <li class="pro_list">
+                                        <div class="list_column">
+                                            <img src="img/PeopleAvatars.png" alt="">
+                                            <div class="pro_item">
+                                                <span>黃金山脈-金晃丸盆栽</span>
+                                                <span>賀卡訂製</span>
+                                                <dl>
+                                                    <dt>收禮人：<span>小明</span> </dt> 
+                                                    <dt>賀詞內容：<span>生日快樂生日快樂生日快樂</span> </dt> 
+                                                    <dt>送禮人：<span>花花</dd> </span> 
+                                                    <dt>賀卡樣式：<span>A.春意盎然</span> </dt> 
+                                                </dl>
+                                            </div>    
+                                        </div>  
+                                        <span>1</span>
+                                        <span>$5500</span>
+                                        <span><i class="fas fa-star"></i></span>
+                                    </li> 
 
+                                </ul>     
+                            </div>    
 
-                            </div>
                         </div>
-                        
+                        <!-- 情況2結束 訂單進來了 -->
                     </div>    
                 </div>
                 <!-- 訂單查詢 -->
+
+
+
+                <!-- 我的收藏 -->
+                <div class="center_wrapper">
+                    <h1>我的收藏</h1>
+                    <div class="center_contain">
+                        <!-- 情況1 -->
+                        <!-- <p>現在還沒有任何收藏喔， <a href="custom.html" style="color:#d9a420; display: unset;">快前往商城</a>看看吧</p> -->
+
+                        <!-- 情況2 有收藏商品了 -->
+                        <ul class="mem_love">
+                            <li>
+                                <img src="./img/product_1.png" alt="">
+                                <p>黃金山脈 – 金晃丸盆栽</p>
+                                <p>NT$1850</p>
+                                <div class="mem_love_btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <div class="gobuy">
+                                        <a href="custom.html">前往購買</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img src="./img/product_1.png" alt="">
+                                <p>黃金山脈 – 金晃丸盆栽</p>
+                                <p>NT$1850</p>
+                                <div class="mem_love_btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <div class="gobuy">
+                                        <a href="custom.html">前往購買</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img src="./img/product_1.png" alt="">
+                                <p>黃金山脈 – 金晃丸盆栽</p>
+                                <p>NT$1850</p>
+                                <div class="mem_love_btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <div class="gobuy">
+                                        <a href="custom.html">前往購買</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <img src="./img/product_1.png" alt="">
+                                <p>黃金山脈 – 金晃丸盆栽</p>
+                                <p>NT$1850</p>
+                                <div class="mem_love_btn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <div class="gobuy">
+                                        <a href="custom.html">前往購買</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>    
+                </div>
+                <!-- 我的收藏結束 -->
+
+
+
+                <!-- 我有問題 -->
+                <div class="center_wrapper nobg">
+                    <div class="mem_qa">
+                        <input type="" placeholder="輸入問題 ...">
+                        <button>新增問題</button>
+                    </div>
+
+                    <div class="mem_answer">
+                        <div class="mem_qs_wrapper ">
+                            <img src="img/PeopleAvatars.png" alt="">
+                            <div class="mem_qs_box">
+                                <p>我的商品一年了都還沒送到是怎樣！</p>
+                                <time class="mem_push">2021/1/30 13:30</time>
+                            </div>
+                        </div>
+
+                        <div class="line_down"></div>
+
+                        <!-- 對話區塊 -->
+                        <div class="mem_ans_wrapper ">
+                            <img src="img/PeopleAvatars.png" alt="">
+                            <div class="mem_ans_box">
+                                <p>我是客服我不想寄</p>
+                                <time>2021/1/30 13:32</time>
+                            </div>
+                        </div>
+
+                        <div class="mem_ans_wrapper ">
+                            <img src="img/PeopleAvatars.png" alt="">
+                            <div class="mem_ans_box">
+                                <p>我要告你，馬上給我寄出！！！</p>
+                                <time>2021/1/30 13:35</time>
+                            </div>
+                        </div>
+
+                        <div class="mem_ans_wrapper ">
+                            <img src="img/PeopleAvatars.png" alt="">
+                            <div class="mem_ans_box">
+                                <p>我是客服我不想寄</p>
+                                <time>2021/1/30 13:40</time>
+                            </div>
+                        </div>
+                        <!-- 對話區塊結束 -->
+
+                        <div class="mem_reply">
+                            <input type="" placeholder="輸入內容 ...">
+                            <button>回覆問題</button>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <!-- 我有問題結束 -->
+
 
 
             </div>
@@ -179,12 +326,9 @@
 
         
         <div class="ex"></div>
+        <div class="ex"></div>
        
     </section>
-
-
-  
-
 
 
     
@@ -226,10 +370,56 @@
   </footer>
   <!-- footer end -->
 
+  
+
 
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.mem_open').click(function () { 
+                $('.order_list_wrapper').slideToggle(1000);
+            });
+
+            //選單點擊
+            $('.mem_btn li').click(function () { 
+                $('.mem_btn li').not(this).removeClass('-mem_this');
+                $(this).addClass('-mem_this');                
+            });
+
+            $('.mem_btn li:nth-child(1)').click(function () { 
+                $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
+                $('.mem_main .center_wrapper:nth-child(1)').addClass('-mem_show');          
+            });
+
+            $('.mem_btn li:nth-child(2)').click(function () { 
+                $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
+                $('.mem_main .center_wrapper:nth-child(2)').addClass('-mem_show');          
+            });
+
+            $('.mem_btn li:nth-child(3)').click(function () { 
+                $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
+                $('.mem_main .center_wrapper:nth-child(3)').addClass('-mem_show');          
+            });
+
+            $('.mem_btn li:nth-child(4)').click(function () { 
+                $('.mem_main .center_wrapper').not(this).removeClass('-mem_show');
+                $('.mem_main .center_wrapper:nth-child(4)').addClass('-mem_show');          
+            });
+                
+            
+            $('.mem_btn li').click(function () { 
+                $('.mem_btn li').not(this).removeClass('-mem_this');
+                $(this).addClass('-mem_this');                
+            });
+
+            
+
+
+            
+        });
+    </script>
 
     <!-- aos動畫效果 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

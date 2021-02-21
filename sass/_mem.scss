@@ -1,52 +1,84 @@
 .mem_wrapper{
     display: flex;
+    @include pad{
+        flex-direction: column;
+    }
 }
 
 .mem_btn{
     width: 20%;
-
+    @include pad{
+        width: 100%;
+        display: flex;
+    }
+    li{
+        padding: 15px;
+        margin: 20px 30px;
+        border-radius: 10px;
+        border: 1px solid #2f4f4f;
+        cursor: pointer;
+        @include pad{
+            margin: 20px 5px;
+            flex-basis: 25%;
+        }
+    }
 }
 
-.mem_btn li{
-    padding: 15px;
-    margin: 20px 30px;
-    border-radius: 10px;
-    border: 2px solid #2f4f4f;
-
+.-mem_this{
+    background-color: #2f4f4f;
+    color: #fff;
 }
+
+
 
 .mem_main{
     width: 80%;
+    @include pad{
+        width: 97%;
+        margin: 0 auto;
+    }
+    .-mem_show{
+        display: block;
+    }
 
 }
 
 .center_wrapper{
+    display: none;
     background-color: #fff;
     border-radius: 30px 30px 10px 10px;
+    >h1{
+        background-color: #2f4f4f;
+        color: #fff;
+        border-radius: 30px;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 18px;
+    
+    }
 }
 
-.center_wrapper>h1{
-    background-color: #2f4f4f;
-    color: #fff;
-    border-radius: 30px;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 18px;
 
-}
 
 .center_contain{
     // outline: 1px solid red;
     display: flex;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 30px 0;
     justify-content: space-evenly;
     width: 100%;
     max-width: 800px;
+    @include pad{
+        flex-direction: column;
+    }
 }
 
 form{
     text-align: left;
+    @include pad{
+        text-align: center;
+        margin: 30px auto;
+    }
     input{
         border: none;
         border-radius: 5px;
@@ -86,24 +118,294 @@ form{
         height: 30px;
     }
     .long{
-        width: 300px;
+        width: 230px;
+        max-width: 300px;
     }
 }
 
 
 // ---------- 訂單查詢 -----------
 .mem_order{
-    width: 100%;
+    width: 97%;
     font-size: 14px;
     border: 1px solid #eeebeb;
-    .mem_order_tit{
-        background-color: #eeebeb;
+    line-height: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include pad{
+       width: 95%;
+       margin: 0 auto;
+    }
+   
+    .mem_order_top{
         display: flex;
         justify-content: space-evenly;
-        p{
-            display: block;
+        border-bottom: 1px dashed #ccc;
+        @include pad{
+            flex-direction: column;
+            justify-content: center;
+        }
+        li{
+            width: 100%;
+            @include pad{
+                display: flex;
+                justify-content: flex-start;
+            }
+            .tit{
+                display: block;
+                background-color: #eeebeb; 
+                @include pad{
+                    width: 50%;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            span{
+                @include pad{
+                    width: 50%;
+                    border-bottom: 1px solid #eeebeb;
+                }
+            }
+            
             
         }
+        li:last-child{
+            .tit,span{
+                border-bottom: unset;
+            }
+        }
     }
+    
+}
+
+.mem_order ol {
+    display: flex;
+    justify-content: space-evenly;
+    li:first-child{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    li{
+        width: 100px;
+    }
+    
+}
+
+.mem_open{
+    // margin-left: 20px;
+    // margin-right: 20px;
+    // align-self: flex-end;
+    cursor: pointer;
+}
+
+.order_list_wrapper{
+    display: none;
+}
+
+.mem_order_list{
+    line-height: 1.8;
+    .pro_list{
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 1px dashed #ccc;
+        .list_column{
+            display: flex;
+            width: 100%;
+            img{
+                width: 50px;
+                height: 50px;
+                margin: 5px 20px;
+            }
+            .pro_item{
+                text-align: left;
+                >span{
+                    display: block;
+                }
+                dl{
+                    padding-left: 10px;
+                    line-height: 1.5;
+                    color: #999;
+                }
+            }
+        }
+        >span{
+            display: block;
+            // outline: 1px solid red;
+            width: 100px;
+        }
+        i{
+            color: #ccc;
+            cursor: pointer;
+        }
+        i:hover{
+            color: #d9a420;
+        }
+       
+    }
+}
+
+
+// ---------- 我的收藏 -----------
+
+.mem_love{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 97%;
+    margin: 0 auto;
+    li{
+        flex-basis: 30%;
+        padding: 15px;
+        margin: 10px;
+        border: 1px solid #eeebeb;
+        border-radius: 5px;
+        @include mobile{
+            flex-basis: 46%;
+            margin: 2%;
+        }
+        img{
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+        .mem_love_btn{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            i{
+                border-radius: 5px;
+                border: 1px solid #2f4f4f;
+                padding: 10px;
+                font-size: 24px;
+                margin-right: 10px;
+
+            }
+            .gobuy{
+                width: 100%;
+                background-color: #2f4f4f;
+                border-radius: 5px;
+                a{
+                    color: #fff;
+                    line-height: 3;
+                    font-size: 14px;
+
+                }
+                
+    
+            }
+        }
+
+    }
+    
+}
+
+
+// ---------- 我有問題 -----------
+.mem_qa,.mem_answer,.mem_reply{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin: 20px auto 30px;
+    padding: 30px;
+    input{
+        width: 100%;
+        height: 40px;
+        background-color: #eeebeb;
+        border: none;
+        border-radius: 5px;
+        padding-left: 20px;
+        color: #2f4f4f;
+        font-size: 16px;
+
+    }
+    button{
+        width: 200px;
+        background-color: #2f4f4f;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        margin-left: 20px;
+    }
+}
+
+.mem_answer{
+    flex-direction: column;
+    .mem_qs_wrapper ,.mem_ans_wrapper{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.mem_ans_box , .mem_qs_box{
+    width: 100%;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+    p{
+        text-align: left;
+        padding: 5px 20px;
+        margin: 0 20px;
+        border-radius: 5px;
+    }
+    time{
+        margin-left:auto;
+        align-self: flex-end;
+        font-size: 12px;
+        @include mobile{
+            margin-right: auto;
+            margin-left: 25px;
+        }
+    }
+    .mem_push{
+        margin-left: 45px;
+    }
+}
+
+
+
+.nobg{
+    background-color: unset;
+}
+
+.line_down{
+    width: 100%;
+    margin: 20px auto;
+    border-bottom: 1px solid #2f4f4f;
+}
+
+.mem_ans_wrapper{
+    padding-left: 40px;
+    margin: 10px auto;
+    position: relative;
+
+    p{
+        background-color: #eeebeb;
+    }
+    p::before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 80px;
+        border: 10px solid;
+        border-color:transparent #eeebeb transparent transparent ;
+    }
+}
+
+.mem_reply{
+    margin: 0;
+    padding: 30px 0 10px;
 }
 
