@@ -40,7 +40,7 @@
             </div>  
             <ol>
                 <li><a href=""><i class="fas fa-shopping-basket"></i></a></li>
-                <li><a href="./MemberCenter.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="./member.html"><i class="fas fa-user"></i></a></li>
             </ol>
             <div class="ham">
                 <span></span> 
@@ -53,8 +53,9 @@
 
 
     <section class="full_wrapper">
-        <!-- 用來推header高度的 -->
-        <div class="ex"></div>
+        
+        <div class="ex"></div><!-- 用來推header高度的 -->
+        
         <article>
             <div class="bread">
                <a href="">首頁</a> > <a href="">會員中心</a>
@@ -84,7 +85,6 @@
                                 <img src="./img/PeopleAvatars.png" />
                                 <i class="fas fa-camera"></i>
                             </label>
-                            
                         </div>
 
                         <form>
@@ -113,7 +113,7 @@
                                 <input type="" class="long">
                             </div> 
                             
-                            <button>確認修改</button>
+                            <input type="submit" value="確認修改" class="mem_submit">
                             
                         </form>
                     </div>    
@@ -194,6 +194,24 @@
                         </div>
                         <!-- 情況2結束 訂單進來了 -->
                     </div>    
+
+                    <!-- 評價視窗 -->
+                    <div class="lightbox_wrapper">
+                        <div class="mem_star_wrapper ">
+                            <i class="fas fa-times"></i>
+                            <p>評價此商品</p>
+                            <div class="mem_star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <input type="submit" value="確認送出">
+                        </div>
+                    </div>    
+                    <!-- 評價視窗結束 -->
+
                 </div>
                 <!-- 訂單查詢 -->
 
@@ -267,7 +285,7 @@
                 <div class="center_wrapper nobg">
                     <div class="mem_qa">
                         <input type="" placeholder="輸入問題 ...">
-                        <button>新增問題</button>
+                        <input type="submit" value="新增問題" class="mem_qanew">
                     </div>
 
                     <div class="mem_answer">
@@ -309,7 +327,7 @@
 
                         <div class="mem_reply">
                             <input type="" placeholder="輸入內容 ...">
-                            <button>回覆問題</button>
+                            <input type="submit" value="回覆問題" class="mem_qareplay">
                         </div>
                         
                     </div>
@@ -413,6 +431,23 @@
                 $('.mem_btn li').not(this).removeClass('-mem_this');
                 $(this).addClass('-mem_this');                
             });
+
+            //點擊評價出現評價視窗
+            $('.pro_list span i').click(function () { 
+                $('.lightbox_wrapper').show();
+            });
+
+            //評價星星變色
+            $('.mem_star i').click(function () { 
+                $(this).toggleClass('-this_star');
+            });
+
+            //點x關閉評價視窗
+            $('.mem_star_wrapper>i').click(function () { 
+                $('.lightbox_wrapper').hide();
+            });
+
+            
 
             
 

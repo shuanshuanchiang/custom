@@ -1422,7 +1422,7 @@ form input {
   background-color: #eeebeb;
 }
 
-form button {
+form .mem_submit {
   width: 200px;
   height: 50px;
   margin: 40px auto 0;
@@ -1430,6 +1430,10 @@ form button {
   color: #fff;
   border-radius: 10px;
   border: none;
+}
+
+.mem_photo {
+  cursor: pointer;
 }
 
 .mem_photo label {
@@ -1598,6 +1602,68 @@ form button {
   color: #d9a420;
 }
 
+.mem_star_wrapper {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  max-height: 250px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.mem_star_wrapper .fa-times {
+  margin-left: auto;
+  font-size: 18px;
+}
+
+.mem_star_wrapper .mem_star i {
+  margin: 30px 5px;
+  font-size: 36px;
+  color: #eeebeb;
+  cursor: pointer;
+}
+
+.mem_star_wrapper .mem_star i:hover {
+  color: #d9a420;
+}
+
+.mem_star_wrapper .mem_star .-this_star {
+  color: #d9a420;
+}
+
+.mem_star_wrapper input {
+  background-color: #2f4f4f;
+  border-radius: 10px;
+  border: unset;
+  color: #fff;
+  margin-bottom: 20px;
+  width: 150px;
+  padding: 10px 0;
+}
+
+.lightbox_wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .mem_love {
   display: flex;
   justify-content: flex-start;
@@ -1638,6 +1704,12 @@ form button {
   padding: 10px;
   font-size: 24px;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.mem_love li .mem_love_btn i:hover {
+  color: #eeebeb;
+  background-color: #2f4f4f;
 }
 
 .mem_love li .mem_love_btn .gobuy {
@@ -1674,7 +1746,7 @@ form button {
   font-size: 16px;
 }
 
-.mem_qa button, .mem_answer button, .mem_reply button {
+.mem_qa .mem_qanew, .mem_qa .mem_qareplay, .mem_answer .mem_qanew, .mem_answer .mem_qareplay, .mem_reply .mem_qanew, .mem_reply .mem_qareplay {
   width: 200px;
   background-color: #2f4f4f;
   color: #fff;
@@ -1732,8 +1804,10 @@ form button {
   }
 }
 
-.mem_ans_box .mem_push, .mem_qs_box .mem_push {
-  margin-left: 45px;
+@media (max-width: 768px) {
+  .mem_ans_box .mem_push, .mem_qs_box .mem_push {
+    margin-left: 45px;
+  }
 }
 
 .nobg {

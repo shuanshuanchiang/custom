@@ -84,7 +84,7 @@ form{
         border-radius: 5px;
         background-color: #eeebeb;
     }
-    button{
+    .mem_submit{
         width: 200px;
         height: 50px;
         margin: 40px auto 0;
@@ -96,6 +96,7 @@ form{
 }
 
 .mem_photo{
+    cursor: pointer;
     label{
         position: relative;
     }
@@ -245,6 +246,73 @@ form{
     }
 }
 
+//商品評價彈跳視窗
+.mem_star_wrapper{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    max-height: 250px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10;
+
+    .fa-times{
+        margin-left: auto;
+        font-size: 18px;
+    }
+    .mem_star{
+        i{
+            margin: 30px 5px;
+            font-size: 36px;
+            color: #eeebeb;
+            cursor: pointer;
+        }
+        i:hover{
+            color: #d9a420;
+        }
+        .-this_star{
+            color: #d9a420;
+        }
+    }
+    input{
+        background-color: #2f4f4f;
+        border-radius: 10px;
+        border: unset;
+        color: #fff;
+        margin-bottom: 20px;
+        width: 150px;
+        padding: 10px 0;
+    }
+
+
+    
+}
+
+.lightbox_wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 110;
+    background-color: rgba(0,0,0,.5);
+}
+
+
+
 
 // ---------- 我的收藏 -----------
 
@@ -279,6 +347,11 @@ form{
                 padding: 10px;
                 font-size: 24px;
                 margin-right: 10px;
+                cursor: pointer;
+            }
+            i:hover{
+                color: #eeebeb;
+                background-color: #2f4f4f;
 
             }
             .gobuy{
@@ -322,7 +395,7 @@ form{
         font-size: 16px;
 
     }
-    button{
+    .mem_qanew,.mem_qareplay{
         width: 200px;
         background-color: #2f4f4f;
         color: #fff;
@@ -370,7 +443,9 @@ form{
         }
     }
     .mem_push{
-        margin-left: 45px;
+        @include mobile{
+            margin-left: 45px;
+        }
     }
 }
 
