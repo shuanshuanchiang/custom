@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider_wrapper{
+            position: relative;
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+        }
+
+        .slider_wrapper img{
+            position: absolute;
+	        left: 0;
+	        top: 0;
+            /* display: block; */
+            width: 500vw;
+            animation: walk 5s steps(5,end) infinite;
+        }
+
+        @keyframes walk{
+            0%{
+                left: 0;
+            }
+            100%{
+                left: -8040px;
+                /* left: -8192px; */
+                /* end 的關係，最後一跳原本 -2112 會讓整張圖片向左移出消失，但被省略掉了 */
+            }
+        }
+        
+        /* @keyframes cir {
+                0%{border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;}
+                25%{border-radius: 45% 55% 35% 65% / 63% 42% 58% 37% ;}
+                50%{border-radius: 57% 43% 52% 48% / 41% 49% 51% 59%  ;}
+                75%{border-radius: 59% 41% 50% 50% / 28% 54% 46% 72%  ;}
+                100%{border-radius: 33% 67% 26% 74% / 70% 35% 65% 30% ;}
+                
+        } */
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="slider_wrapper">
+        <img src="img/custom/kv.png" alt="" srcset="">
+        
+    </div>
+    
+</body>
+</html>
