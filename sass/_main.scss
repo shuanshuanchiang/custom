@@ -90,7 +90,6 @@ article {
         h1 {
           font-size: 36px;
           text-align: left;
-          // margin-bottom: 30px;
           font-weight: 700;
         }
         p {
@@ -122,6 +121,10 @@ article {
         .main_about_title {
           @include fz;
           font-weight: 700;
+          @include pad{
+            font-size: 36px;
+          }
+          
         }
         .main_about_title1 {
           // @include fz_small;
@@ -132,7 +135,7 @@ article {
     .main_about_bg{
     
       background-image: url("../img/background.png");
-      background-size: 95%;
+      background-size: 110%;
    
       background-repeat: no-repeat;
       background-position:center center;
@@ -143,21 +146,33 @@ article {
        
         margin: 0 auto;
         .index_about_word {
-          width: 400px;
+          width: 100%;
+          max-width: 400px;
           margin-top: 30px;
           float: left;
           margin-left: 150px;
+          @include pad{
+            float: none;
+            margin: 30px auto;
+            max-width: none;
+          }
           h1 {
             font-size: 26px;
             font-weight: 700;
             text-align: left;
             color: #979f77;
             padding-bottom: 20px;
+            @include pad{
+              text-align: center;
+            }
           }
           p {
             font-size: 16px;
             text-align: left;
             padding-bottom: 40px;
+            @include pad{
+              text-align: center;
+            }
           }
           a {
             text-align: center;
@@ -165,19 +180,43 @@ article {
           .bubble_btnn {
             // margin-right: 180px;
             text-align: left;
+            @include pad{
+              text-align: center;
+            }
           }
           img{
-            width: 200px;
-            margin-right: 180px;
+            margin-top: 50px;
+            width: 100%;
+            @include pad{
+              float: none;
+              margin-right:0;
+              width: 50%;
+            }
+            @include mobile{
+              width: 100%;
+            }
+          }
+                    
+        }
+        .main_about_three{
+          display:block;
+          width: 40%;
+          @include pad{
+            display: none;
           }
         }
         img {
-          float: right;
-          width: 500px;
-          margin-right: 85px;
+          width: 100%;
+          max-width: 850px;
+          @include pad{
+            float: unset;
+            margin-right: 0;
+          }
+          
         }
+       
         .main_about_diy{
-         width: 1000px;
+        margin-top: 40px;
 
          
         }
@@ -194,6 +233,9 @@ article {
     h1 {
       @include fz;
       font-weight: 700;
+      @include pad{
+        font-size: 36px;
+      };
     }
     .h1_small {
       // @include fz_small;
@@ -352,6 +394,9 @@ article {
     h1 {
       @include fz;
       font-weight: 700;
+      @include pad{
+        font-size: 36px;
+      };
     }
     .h1_small {
       font-size: 22px;
@@ -389,15 +434,18 @@ article {
 }
 
 .index_blog {
- background-image: url("../img/background.png");
- background-size: 86%;
+ background-image: url("../img/index/background_blog.png");
+ background-size: cover;
  background-repeat: no-repeat;
- background-position:center center;
+ background-position:center bottom;
 
   article {
     h1 {
       @include fz;
       font-weight: 700;
+      @include pad{
+        font-size: 36px;
+      };
     }
     .h1_small {
       font-size: 22px;
@@ -456,9 +504,7 @@ article {
           h1 {
             width: 200px;
           }
-          .bubble_btnn {
-            // margin-left: 25px;
-          }
+          
         }
       }
     }
@@ -467,19 +513,24 @@ article {
   background-size: cover;
   article{
     .index_about{
-      .index_about_word{
-        margin: 0;
-        padding-left: 60px;
-        img{
-          margin-right: 135px;
+      .index_about_wra{
+        width: 100%;
+        display: flex;
+        .index_about_word{
+          margin: 0;
+          // padding-left: 60px;
+          img{
+            // margin-right: 135px;
+          }
         }
+        img{
+        }     
+        .main_about_diy{
+          width: 800px;
+        }
+
       }
-      img{
-        width: 450px;
-      }
-      .main_about_diy{
-        width: 800px;
-      }
+      
     }
   }
 }
@@ -603,20 +654,15 @@ article {
   .main_about_bg{
     article{
       .index_about{
-        width: 100vw;
         .index_about_word{
           padding: 0;
-          width: 300px;
           padding-left: 20px;
           img{
-            margin-right: 90px;
+            margin: 50px 0 0;
           }
         }
         .main_about_three{
-          width: 430px;
-          margin: 0;
-          margin-right:20px;
-          margin-top: 70px;
+          display: none;
         }
         .main_about_diy{
          width: 90vw;
@@ -644,8 +690,7 @@ article {
   }
   .two {
     width: 100vw;
-    .pic_left {
-    }
+    
     .pic_right {
       padding-left: 100px;
       display: none;
@@ -751,32 +796,30 @@ article {
 
  article{
    .main_about_title{
-     font-size: 28px;
+     font-size: 36px;
    }
    .main_about_title1{
-     font-size: 18px;
+     font-size: 22px;
    }
  }
 
  .main_about_bg{
    article{
      .index_about{
-       width: 100vw;
-       .main_about_three{
-         display: none;
-       }
+      //  width: 100vw;
+       
        .main_about_diy{
-         margin-right: 50px;
+         margin-right: 0px;
        }
        .index_about_word{
          padding: 0;
-         width: 100vw;
+        //  width: 100vw;
          h1{
            font-size: 28px;
            text-align: center;
          }
          p{
-           font-size: 12px;
+           font-size: 16px;
            text-align: center;
          }
          .bubble_btnn{
@@ -788,7 +831,7 @@ article {
           font-size: 12px;
         }
         img{
-          margin-right: 110px;
+          margin: 30px 0 0;
         }
        }
 
@@ -799,10 +842,10 @@ article {
   article {
     .index_product {
       h1 {
-        font-size: 24px;
+        font-size: 36px;
       }
       .h1_small {
-        font-size: 14px;
+        font-size: 22px;
       }
     }
   }
@@ -879,10 +922,10 @@ article {
   article {
     .index_diy {
       h1 {
-        font-size: 24px;
+        font-size: 36px;
       }
       .h1_small {
-        font-size: 14px;
+        font-size: 22px;
       }
     }
   }
@@ -893,10 +936,10 @@ article {
     width: 100vw;
     article {
       h1 {
-        font-size: 24px;
+        font-size: 36px;
       }
       .h1_small {
-        font-size: 14px;
+        font-size: 22px;
       }
       
     }
@@ -904,16 +947,152 @@ article {
   
 }
 
-//
+// ---- 泡泡動畫推距離 -----
 .main .-right_bottom {
   right: 0;
-  bottom: -100%;
+  bottom: -80%;
 }
 
 .main .-left_top {
-  top: 105%;
+  top: 85%;
   left: 0;
 }
+
+// ---- shuan重寫第二塊輪播css -----
+.main_plant_box{
+  position: relative;
+  h1{
+    font-size: 70px;
+    font-weight: 700;
+    @include pad{
+      font-size: 36px;
+    }
+    @include mobile{
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+  }
+  >p{
+    font-size: 22px;
+  }
+  .-bigbig {
+    @include mobile{
+      transform: scale(1.07);
+    }
+  }
+
+}
+
+.plant-container{
+  position: relative;
+  margin: 0 auto;
+  padding: 200px 0;
+  width: 100%;
+  max-width: 1000px;
+  .bubble_btnn{
+    text-align: left;
+    @include  pad{
+      text-align: center;
+    }
+  }
+  .swiper-pagination{
+    padding-top: 200px;
+  }
+  .swiper-pagination>.swiper-pagination-bullet {
+    opacity: 1;
+    border:#2f4f4f solid 1px;
+    background-color: transparent;
+  }
+  .swiper-pagination>.swiper-pagination-bullet-active {
+    background-color: #2f4f4f;
+  
+  }
+  
+}
+
+.main_plant_bg{
+  width: 60%;
+  height:  100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotate(3deg);
+  background:rgba(238,235,235,.6);
+  border-radius: 61% 39% 65% 35% / 39% 59% 41% 61%  ;
+  z-index: -1;
+  animation: cc 8s linear infinite;
+  @include pad{
+    width: 90%;
+    height: 80%;
+  }
+  @include mobile{
+    height: 40%;
+  }
+
+}
+
+.swiper-wrapper{
+  padding-bottom: 40px;
+
+}
+
+.plant_slide{
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  @include pad{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: 100%;
+    max-width: 500px;
+    @include pad{
+      max-width: 300px;
+    }
+  }
+}
+
+.main_txt{
+  width: 100%;
+  max-width: 350px;
+  
+  h2{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 80px;
+    text-align: left;
+    @include pad{
+      margin-top: 30px;
+      text-align: center;
+      font-size: 22px;
+    }
+    
+  }
+  p{
+    margin: 20px 0;
+    padding-bottom: 40px;
+    text-align: left;
+  }
+
+}
+
+.-b_ex{
+  margin: 20px 0;
+  a{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
 
 // ---- shuan重寫商品區的css -----
 
@@ -930,7 +1109,6 @@ article {
   @include mobile{
     height: 70px;
   }
-  
 
 }
 
@@ -1003,7 +1181,7 @@ article {
     max-width: 700px;
   }
   @include mobile{
-    max-width: 400px;
+    max-width: 360px;
   }
 
   .index_pro_txt{
@@ -1016,7 +1194,8 @@ article {
       font-size: 26px;
       font-weight: 700;
       @include mobile{
-        font-size: 22px;
+        font-size: 18px;
+        line-height: 1;
       }
     }
     p{
@@ -1055,3 +1234,101 @@ article {
     }
   }
 }
+
+
+// ---- shuan重寫手作課程的css -----
+.index_diy_container{
+  width: 100%;
+  position: relative;
+  .swiper-button-next, .swiper-button-prev {
+    color: rgba(255,255,255,1);
+    padding: 0 30px 30px;
+    @include pad{
+      padding: 0 0 30px;
+    }
+  }
+  .swiper-pagination>.swiper-pagination-bullet {
+    opacity: 1;
+    border:#2f4f4f solid 1px;
+    background-color: transparent;
+  }
+  .swiper-pagination>.swiper-pagination-bullet-active {
+    background-color: #2f4f4f;
+  
+  }
+}
+
+.index_work_txt{
+  // outline: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding-bottom: 20px;
+  max-width: 500px;
+  max-height: 500px;
+  background:rgba(255,255,255,.7);
+  border-radius: 58% 42% 56% 44% / 37% 54% 46% 63% ;
+  animation: cc 8s linear infinite;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  @include mobile{
+    max-width: 300px;
+  max-height: 300px;
+  }
+  
+}
+
+.txt_tit{
+  margin-bottom: 30px;
+  font-weight: 700;
+  @include phone{
+    margin-bottom: 0px;
+  }
+  .work_no{
+    font-size: 52px;
+    color: #979f77;
+    @include mobile{
+      font-size: 36px;
+     
+    }
+  }
+  h3{
+    font-weight: 700;
+    font-size: 26px;
+    @include mobile{
+      font-size: 16px;
+    }
+    @include phone{
+      font-size: 14px;
+    }
+  }
+  .work_t{
+    padding: 5px 0;
+    @include phone{
+      font-size: 14px;
+    }
+  }
+  .work_p{
+    @include phone{
+      font-size: 14px;
+    }
+    span{
+      font-size: 26px;
+      @include mobile{
+        font-size: 16px;
+      }
+      @include phone{
+        font-size: 14px;
+      }
+    }
+  }
+
+  
+}
+
