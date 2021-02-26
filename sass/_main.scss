@@ -452,16 +452,56 @@ article {
       font-weight: 400;
     }
     
-        img { 
-          
-          margin-top: 50px;
-        }
-        .bubble_btnn{
-          text-align: center;
-          margin-top: 50px;
-        }
-      }
+    .bubble_btnn{
+       text-align: center;
+       margin-top: 50px;
     }
+  }
+}
+
+.index_blog_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 0 30px;
+  li{
+    flex-basis: 22%;
+    margin: 0 1.5%;
+    @include mobile{
+      flex-basis: 47%;
+      margin: 1% 1.5%;
+    }
+    @include phone{
+      // margin: 10px;
+    }
+    img{
+      border-radius: 20px;
+    }
+    
+  }
+  li:nth-of-type(odd){
+    padding: 40px 0;
+    @include mobile{
+      padding: 0;
+      // margin: 1% 1.5%;
+    }
+  }
+  a{
+    position: relative;
+  }
+
+}
+
+.in_day{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: rgba(49,79,79,.9);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+
+}
   
 
 
@@ -615,18 +655,6 @@ article {
   }
   .diy_turn {
     width: 100vw;
-  }
-
-  .index_blog {
-    article {
-      ul {
-        li {
-          img {
-            width: 150px;
-          }
-        }
-      }
-    }
   }
 }
 //990結束
