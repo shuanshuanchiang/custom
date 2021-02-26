@@ -308,6 +308,16 @@ nav .index_run .show img {
   height: auto;
 }
 
+.main_index_ex {
+  padding: 120px 0;
+}
+
+@media (max-width: 990px) {
+  .main_index_ex {
+    padding: 50px 0;
+  }
+}
+
 article .index_introduce {
   margin: 0 auto;
 }
@@ -1196,13 +1206,13 @@ article .index_diy .h1_small {
   }
 }
 
-.main .-right_bottom {
+.main_plant_box .-right_bottom {
   right: 0;
-  bottom: -80%;
+  bottom: -20%;
 }
 
-.main .-left_top {
-  top: 85%;
+.main_plant_box .-left_top {
+  top: 5%;
   left: 0;
 }
 

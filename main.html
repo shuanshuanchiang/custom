@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/bubblebtn.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/top.css">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,8 +60,33 @@
 
 
 
-    <div class="full_wrapper main">
-        <!-- 背景泡泡動畫 start 要放在section裡，article外面-->
+
+    <!-- 主視覺 -->
+    <main id="main">
+        <div class="intro">
+            <div class="intro_tit">肉多怪不怪？</div>
+            <div class="visual-wrap">
+                <div class="visual-list">
+                    <div class="item item04 origin"><img src="img/index/plant_05.png" alt=""></div>
+                    <div class="item item05 origin"><img src="img/index/plant_04.png" alt=""></div>
+                    <div class="item item01 origin"><img src="img/index/plant_01.png" alt=""></div>
+                    <div class="item item02 origin"><img src="img/index/plant_02.png" alt=""></div>
+                    <div class="item item03 origin"><img src="img/index/plant_03.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div class="main_index_ex"></div>
+    
+
+
+     <!-- 多肉介紹輪播 -->
+    <section class="main_plant_box">
+
+        <!-- 背景泡泡動畫-->
         <div class="circle_block -left_top">
             <div class="circle_green2"></div>
             <div class="circle_gold"></div>
@@ -70,28 +96,8 @@
             <div class="circle_deepgreen"></div>
             <div class="circle_green1"></div>
         </div>
-
         <!-- 背景泡泡動畫 end-->
-     
 
-        <!-----------最上面輪播---------->
-        <nav>
-            <div class="index_run">
-                <div class="plant1 show"><img src="./img/index/plant_01.png" alt=""></div>
-                <div class="plant2 show"><img src="./img/index/plant_02.png" alt=""></div>
-                <div class="plant3 show"><img src="./img/index/plant_03.png" alt=""></div>
-                <div class="plant4 show"><img src="./img/index/plant_04.png" alt=""></div>
-                <div class="plant5 show"><img src="./img/index/plant_05.png" alt=""></div>
-            </div>
-        </nav>
-    </div>
-    
-
-    <div class="ex"></div>
-
-
-     <!-- 第二塊輪播開始 -->
-    <section class="main_plant_box">
         <h1>Succulents introduction</h1>
         <p>多肉介紹</p>
         <div class="main_plant_bg"></div>
@@ -402,17 +408,18 @@
         </div>
 
     </section>
-    <!-- 第二塊輪播結束 -->
+    <!-- 多肉介紹輪播結束 -->
     
 
     
-    <div class="ex"></div>
+    <div class="main_index_ex"></div>
 
 
 
 
     <!-----關於我們------->
     <section class="main_about_bg">  
+        
         <article>
             <h1 class="main_about_title">About us</h1>
             <h1 class="main_about_title1">關於我們</h1>
@@ -473,7 +480,10 @@
 
 
 
-    <div class="ex  main_ex"></div>
+    <div class="main_index_ex"></div>
+
+    
+    
     <!----------產品------------>
     <article>
         <div class="index_product">
@@ -528,7 +538,7 @@
 
 
 
-    <div class="ex"></div>
+    <div class="main_index_ex"></div>
 
 
 
@@ -769,8 +779,7 @@
         </div>
         </article>
         
-        <div class="ex"></div>
-        <div class="ex"></div>
+        <div class="main_index_ex"></div>
     </div>
     
 
@@ -951,6 +960,8 @@
         
     });
 </script>
+<script type="text/javascript" src="js/plugin/jquery.inview.min.js"></script>
+<script type="text/javascript" src="js/top.js"></script>
 
 <!-- 每一個頁面都要引入以下這兩個js -->
 <script src="./js/header.js"></script>
