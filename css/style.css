@@ -403,7 +403,8 @@ article .main_about_title1 {
 
 .main_about_bg {
   background-image: url("../img/background.png");
-  background-size: 110%;
+  background-size: 120%;
+  height: 80vw;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -501,7 +502,7 @@ article .main_about_title1 {
 
 .main_about_bg article .index_about img {
   width: 100%;
-  max-width: 850px;
+  max-width: 900px;
 }
 
 @media (max-width: 990px) {
