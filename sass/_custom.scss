@@ -452,6 +452,23 @@
     margin: 0 5px;
 }
 
+//改變捲軸樣式
+.custom_product_items ul::-webkit-scrollbar {
+	display: none;
+}
+// .custom_product_items ul::-webkit-scrollbar{
+//     width:10px;
+//     background-color:transparent;
+//     @include phone{
+//         height: 5px;
+//     }
+// }
+// .custom_product_items ul::-webkit-scrollbar-thumb{
+//     background-color: #ccc;
+//     border-radius: 10px;
+// }
+
+
 .custom_product_items{
     background-color: #fff;
     height: 100%;
@@ -469,6 +486,7 @@
     height: 600px;
     overflow: hidden;
     overflow-y: scroll;
+    overflow-x: hidden;
     padding: 0 10px;
     justify-content: space-evenly;
     align-content: flex-start;
@@ -530,6 +548,104 @@
     z-index: 1;
     // pointer-events: none;
 }
+
+//訂製賀卡light box
+.c_wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+}
+
+.c_lightbox::-webkit-scrollbar {
+	display: none;
+}
+
+.c_lightbox{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 130;
+    @include phone{
+        width: 90%;
+        padding: 30px;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden; 
+    }
+    i{
+        font-size: 22px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    // p{
+    //     font-weight: 700;
+    // }
+    ul{
+        width: 100%;
+        max-width: 450px;
+    }
+    ul>li{        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 20px auto;
+        input,textarea{
+            width: 100%;
+        }
+    }
+    ol{
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            font-size: 14px;
+            padding: 1%;
+            flex-basis: 25%;
+            cursor: pointer;
+            @include phone{
+                padding: 2%;
+                flex-basis: 50%;
+            }
+        }
+        .-this{
+            background-color: #eeebeb;
+        }
+    }
+    
+}
+
+.c_btn_wra{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    @include mobile{
+        flex-direction: column;
+    }
+    .bubble_btnn{
+        margin-top: 20px;
+    }
+    
+}
+
 
 
 

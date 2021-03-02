@@ -265,6 +265,13 @@ function setorder(target = 0) {
     }
 };
 
+/* --------------------------  彈跳視窗 ---------------------------------*/
+
+
+
+
+
+
 /* -------------------------- tweenmax ---------------------------------*/
 
 var controller = new ScrollMagic.Controller();
@@ -307,7 +314,7 @@ tl.to('.custom_paw_out', 1.5, {
     }, "upup").addLabel("nono")
     .to('.custom_price', 1, {
         opacity: 0,
-    }, "nono").to('.bubble_btnn', 1, {
+    }, "nono").to('.custom_block7 .bubble_btnn', 1, {
         opacity: 0,
     }, "nono").to('.custom_btn', 1, {
         opacity: 0,
@@ -349,6 +356,9 @@ tl.stop();
 bubblebtnn.addEventListener('click', function () {
     tl.play();
 }, false);
+
+
+
 
 
 
